@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.2)
+PROJECT (indian-god)
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "/Users/marty/robotics/opencv")
+FIND_PACKAGE(OpenCV REQUIRED)
+ADD_EXECUTABLE(indian-god src/main.cpp)
+MESSAGE(STATUS "${OpenCV_LIBS}")
+TARGET_LINK_LIBRARIES(indian-god ${OpenCV_LIBS})
